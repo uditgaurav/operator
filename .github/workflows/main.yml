@@ -52,7 +52,8 @@ jobs:
       - name: Build docker image
         run: |
           sudo make deps
-          sudo -s make gotasks
+          sudo make format
+          sudo make build
           sudo docker build -f build/Dockerfile -t litmuschaos/chaos-operator:ci .
 
       #Install and configure a kind cluster
