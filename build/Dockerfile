@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi7-dev-preview/ubi-minimal:7.6
 
 ENV OPERATOR=/usr/local/bin/operator \
     USER_UID=1001 \
-    USER_NAME=operator
+    USER_NAME=chaos-operator
 
 # install operator binary
 COPY build/_output/bin/operator ${OPERATOR}
