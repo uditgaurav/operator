@@ -68,7 +68,7 @@ build:
 	@echo "------------------"
 	@echo "--> Build Chaos Operator"
 	@echo "------------------"
-	@go build -o ${GOPATH}/src/github.com/litmuschaos/operator/build/_output/bin/operator -gcflags all=-trimpath=${GOPATH} -asmflags all=-trimpath=${GOPATH} github.com/litmuschaos/operator/cmd/manager 
+	@go build -o ${GOPATH}/src/github.com/litmuschaos/chaos-operator/build/_output/bin/chaos-operator -gcflags all=-trimpath=${GOPATH} -asmflags all=-trimpath=${GOPATH} github.com/litmuschaos/chaos-operator/cmd/manager 
 
 .PHONY: test
 test:

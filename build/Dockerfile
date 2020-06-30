@@ -14,5 +14,3 @@ ENTRYPOINT ["/usr/local/bin/entrypoint"]
 
 USER ${USER_UID}
 
-
-
