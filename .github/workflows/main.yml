@@ -26,7 +26,10 @@ jobs:
           export GOPATH=${HOME}/go
           cd ${GOPATH}/src/github.com/litmuschaos/
 
-      - name: echoing up GOPATH 
+      - name: Setting up GOPATH 
+        run: echo ::set-env name=GOPATH::${HOME}/go
+
+      - name: Echo GOPATH
         run: echo ${GOPATH}
 
       #Using the last commit id of pull request
