@@ -25,7 +25,9 @@ jobs:
           mkdir -p ${HOME}/go/src/github.com/litmuschaos/
           export GOPATH=${HOME}/go
           cd ${GOPATH}/src/github.com/litmuschaos/
-          
+
+      - name: echoing up GOPATH 
+        run: echo ${GOPATH}
 
       #Using the last commit id of pull request
       - uses: octokit/request-action@v2.x
