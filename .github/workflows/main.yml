@@ -41,7 +41,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          sudo docker build -f build/ansible-runner/Dockerfile -t litmuschaos/chaos-operator:ci .
+          sudo docker build -f build/Dockerfile -t litmuschaos/chaos-operator:ci .
 
       #Install and configure a kind cluster
       - name: Installing Prerequisites (KinD Cluster)
