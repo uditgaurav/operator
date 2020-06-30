@@ -68,11 +68,11 @@ build:
 	@echo "------------------"
 	@echo "--> Build Chaos Operator"
 	@echo "------------------"
-	@go build -o ${GOPATH}/src/github.com/litmuschaos/chaos-operator/build/_output/bin/chaos-operator -gcflags all=-trimpath=${GOPATH} -asmflags all=-trimpath=${GOPATH} github.com/litmuschaos/chaos-operator/cmd/manager 
+	@go build -o ${GOPATH}/src/github.com/litmuschaos/operator/build/_output/bin/operator -gcflags all=-trimpath=${GOPATH} -asmflags all=-trimpath=${GOPATH} github.com/litmuschaos/operator/cmd/manager 
 
 .PHONY: test
 test:
-	@echo "------------------"
+	@echo "------------------"::set-env name=GOPATH::${HOME}/go::set-env name=GOPATH::${HOME}/go
 	@echo "--> Run Go Test"
 	@echo "------------------"
 	@go test ./... -coverprofile=coverage.txt -covermode=atomic -v 
